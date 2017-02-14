@@ -9,17 +9,18 @@
 }
 
 .navbar h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     color: white;
     text-align: center;
     font-family: "Calibri", sans-serif;
     font-weight: 800;
+    padding: 1.5rem;
 }
 
 .new-room-button {
     vertical-align: center;
     background: grey;
-    font-size: 1.2rem;
+    font-size: 2rem;
     color: white;
     text-align: center;
     font-family: "Calibri", sans-serif;
@@ -38,7 +39,7 @@
 
 .room {
     color: white;
-    font-size: 1.2rem;
+    font-size: 2rem;
     text-align: center;
     font-family: "Calibri", sans-serif;    
     padding: .2rem;
@@ -49,4 +50,11 @@
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
+}
+
+.logo {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: none;
 }
