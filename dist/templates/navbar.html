@@ -1,0 +1,13 @@
+<section class="navbar" ng-controller="navbarController as navbar">
+    <h1>Bloc Chat</h1>
+    
+    <div class="new-room-button">
+        Add Chat Room
+    </div>
+
+    <div class="rooms-list">
+        <div class="room" ng-repeat="room in navbar.roomsArray">
+        {{ room.$value }}
+        </div>
+    </div>
+</section>

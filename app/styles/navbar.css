@@ -1,0 +1,52 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    background: rgba(194, 194, 191, 1);
+    z-index: 100;
+}
+
+.navbar h1 {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    font-family: "Calibri", sans-serif;
+    font-weight: 800;
+}
+
+.new-room-button {
+    vertical-align: center;
+    background: grey;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    font-family: "Calibri", sans-serif;
+    padding: 1rem;
+}
+
+.new-room-button:hover {
+    cursor: pointer;
+    background: white;
+    color: grey;
+}
+
+.rooms-list {
+    padding: 1rem;
+}
+
+.room {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: "Calibri", sans-serif;    
+    padding: .2rem;
+}
+
+.room:hover {
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}

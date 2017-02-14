@@ -1,12 +1,7 @@
-<div class="test">test</div>
+<main class="home">
+    Click on a chat room to see messages.
+    <br>
+    Or create a new chat room.
+</main>
 
-<div class="rooms-list">
-    <table>
-        <tr ng-repeat="room in home.roomsArray">
-            <td> {{ room }} </td>
-        </tr>
-    </table>
-</div>
-
-<div class="messages">
-</div>
+<ng-include src="'/templates/navbar.html'"></ng-include>
