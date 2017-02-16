@@ -1,3 +1,10 @@
-<section class="modal" ng-controller="modalController as modal">
-    
+<section class="modalTemp" ng-controller="modalController as modal">
+    <h1>Add Chat Room</h1>
+    <div class="new-room-input">
+        Please enter a name for the new chat room.
+    </div>
+    <input class="new-room-input-box" type="text" ng-model="modal.name"/>
+    <div class="new-room-input-button" ng-click="modal.addRoom(modal.name)">
+        Create Room
+    </div>
 </section>

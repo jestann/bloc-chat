@@ -1,10 +1,8 @@
 (function () {
     function homeController(Room) {
-        this.roomsArray = Room.all;
+        // no functionality needed here yet
     }
     
     angular.module('blocChat')
         .controller('homeController', ['Room', homeController]);
 })();
-
-// -tpls (includes templates)
