@@ -1,14 +1,15 @@
 (function () {
-    function modalController ($uibModal, Room) {
+    function modalController ($uibModalInstance, Room) {
         this.roomsArray = Room.all;
-        this.name = "type a name here...";
+        this.name = "";
+        this.closeModal = $uibModalInstance.close;
         this.addRoom = function (name) {
             Room.addRoom(name);
-            this.name = "type a name here...";
-            // $uibModal.close();
+            this.name = "";
+            this.closeModal();
         };
     }
     
     angular.module('blocChat')
-        .controller('modalController', ['$uibModal','Room', modalController]);
+        .controller('modalController', ['$uibModalInstance','Room', modalController]);
 })();

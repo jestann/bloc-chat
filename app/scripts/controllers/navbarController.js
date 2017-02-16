@@ -1,12 +1,18 @@
 (function () {
-    function navbarController ($uibModal, Room) {
+    function navbarController ($uibModal, Room, Message) {
         this.roomsArray = Room.all;
         this.openModal = $uibModal.open;
-        this.template = {templateUrl: "/templates/modal.html"};
+        this.template = {
+            templateUrl: "/templates/modal.html", 
+            controller: "modalController", 
+            controllerAs: "modal"};
+        this.setRoomId = function (roomId) {
+            // Message.setRoom(roomId);
+        }
     }
     
     angular.module('blocChat')
-        .controller('navbarController', ['$uibModal', 'Room', navbarController]);
+        .controller('navbarController', ['$uibModal', 'Room', 'Message', navbarController]);
 })();
 
 
