@@ -1,0 +1,32 @@
+.message-view {
+    color: black;
+    font-family: "Calibri", sans-serif;
+}
+
+.message-view h1 {
+    text-align: left;
+    font-size 3rem;
+    font-weight: 800;
+}
+
+.message-list {
+    text-align: center;
+}
+
+.message-line {
+    background: white; /* needs to alternate */
+    font-size: 2rem;
+}
+
+.username {
+    font-weight: 800;
+}
+
+.timestamp {
+    font-style: italic;
+    color: rgba(194, 194, 191, 1);
+}
+
+.message-text {
+    /* nothing here yet */
+}
