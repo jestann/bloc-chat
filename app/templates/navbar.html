@@ -7,8 +7,7 @@
 
     <div class="rooms-list">
         <div class="room" ng-repeat="room in navbar.roomsArray">
-        {{ room.$value }}
-            <!-- here I need to be able to link this, ui-sref style, passing room.$id to chatController somehow? -->
+            <span ui-sref="chatroom" ng-click="navbar.setRoom(room.$id)">{{ room.$value }}</span>
         </div>
     </div>
     

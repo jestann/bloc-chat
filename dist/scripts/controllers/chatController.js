@@ -1,15 +1,13 @@
-(function() {
+(function () {
     function chatController (Message) {
-        this.name = "";
-        this.messageList = [];
-        this.getRoom = function (room) {
-            Message.getByRoomId(room.val("roomId"));
-        }
-        
-        // chat.username, chat.timestamp, chat.content
-        
+        this.Message = Message;
+        console.log(this.Message.roomChats);
+        // this.roomId = Message.roomId;
+        // this.roomName = Message.roomName;
+        // this.roomChats = Message.roomChats;
     }
     
-    angular.module('blocChat')
+    angular
+        .module('blocChat')
         .controller('chatController', ['Message', chatController]);
 })();

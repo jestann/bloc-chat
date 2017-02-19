@@ -11,13 +11,11 @@
                 url: '/',
                 controller: 'homeController as home',
                 templateUrl: '/templates/home.html'
-/*            })
+            })
             .state('chatroom', {
-                url: '/chat',
+                url: '/',
                 controller: 'chatController as chatroom',
-                templateUrl: 'templates/chatroom.html'
-                // not sure about this setup yet
-*/
+                templateUrl: '/templates/chatroom.html'
         });  
     }
     

@@ -1,10 +1,13 @@
-<main class="message-view" ng-controller="chatController as chatroom">
-    <h1>{{ chatroom.name }}</h1>
+<main class="chatroom">
+    <h1>testing {{ chatroom.Message.roomName }}</h1>
     <section class="message-list">
-        <div class="message-line" ng-repeat="chat in chatroom.messageList">
-            <div class="username">{{ chat.username }}</div>
-            <div class="timestamp">{{ chat.timestamp }}</div>
-            <div class="message-text">{{ chat.content }}</div>
+        <div class="message-line" ng-repeat="chat in chatroom.Message.roomChats">
+            {{ chat }}
+<!--            <span class="username">{{ chat.username }}</span>
+            <span class="timestamp">{{ chat.sentAt }}</span>
+            <span class="message-text">{{ chat.content }}</span>-->
         </div>
     </section>
 </main>
+
+<ng-include src="'/templates/navbar.html'"></ng-include>

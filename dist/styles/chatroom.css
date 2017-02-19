@@ -1,9 +1,14 @@
-.message-view {
-    color: black;
+.chatroom {
+    position: absolute;
+    left: 200px;
     font-family: "Calibri", sans-serif;
+    color: grey;
+    padding: 3rem;
+    padding-left: 4rem;
+    line-height: 2.5rem;   
 }
 
-.message-view h1 {
+.chatroom h1 {
     text-align: left;
     font-size 3rem;
     font-weight: 800;
@@ -14,9 +19,12 @@
 }
 
 .message-line {
-    /* nth-child */
-    background: white; /* needs to alternate */
+    background: white;
     font-size: 2rem;
+}
+
+.message-line:nth-child(even) {
+    background: rgba(242, 242, 242, 1);
 }
 
 .username {
@@ -31,3 +39,4 @@
 .message-text {
     /* nothing here yet */
 }
+
