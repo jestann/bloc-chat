@@ -16,8 +16,13 @@
             Message.roomName = Message.rooms.filter((room) => room.$id===roomId)[0].$value;
 
             Message.roomChats = $firebaseArray(messageQuery.orderByChild("roomId").equalTo(roomId));
+            
             // console.log(Message.roomChats);
             // this console.log is always an empty array... why is that?
+        }
+        
+        Message.send = function (content) {
+            
         }
         
         return Message;        
