@@ -1,11 +1,11 @@
 <section class="modalTemp">
-    <div class="close-button" ng-click="modal.closeModal()">X</div>
+    <div class="close-button modal-input" ng-click="modal.closeModal()">X</div>
     <h1>Add Chat Room</h1>
-    <div class="new-room-input">
+    <div class="modal-input">
         Please enter a name for the new chat room.
     </div>
-    <input class="new-room-input-box" type="text" placeholder="type a name here..." ng-model="modal.name"/>
-    <div class="new-room-input-button" ng-click="modal.addRoom(modal.name)">
+    <input class="modal-input-box" type="text" placeholder="type a name here..." ng-model="modal.name"/>
+    <div class="modal-input-button" ng-click="modal.addRoom(modal.name)">
         Create Room
     </div>
 </section>

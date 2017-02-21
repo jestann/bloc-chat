@@ -1,6 +1,7 @@
 (function() {
     function Message($firebaseArray, Room) {
         let Message = {
+            username: "",
             room: "",
             roomName: "",
             roomChats: [],

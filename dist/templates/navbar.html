@@ -1,7 +1,7 @@
 <section class="navbar" ng-controller="navbarController as navbar">
     <h1>Bloc Chat</h1>
     
-    <div class="new-room-button" ng-click="navbar.openModal(navbar.template)">
+    <div class="navbar-button" ng-click="navbar.openModal(navbar.roomTemplate)">
         Add Chat Room
     </div>
 
@@ -10,9 +10,19 @@
             <span ui-sref="chatroom" ng-click="navbar.setRoom(room.$id)">{{ room.$value }}</span>
         </div>
     </div>
-    
+
+    <div class="current-user" ng-show="navbar.Message.username">
+        Currently logged in as <span class="current-username">{{ navbar.Message.username }}</span>.
+    </div>
+
+    <div class="navbar-button new-user-button" ng-show="navbar.Message.username" ng-click="navbar.openModal(navbar.userTemplate)">
+        Switch User
+    </div>
+
+    <!--
     <div class="logo">
         <img src="/assets/images/bloc-logo-white.png">
-        <!-- this logo is kinda big, so i took it off for now-->
+        This logo is kinda big, so i took it off for now.
     </div>
+    -->
 </section>

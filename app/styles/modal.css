@@ -4,34 +4,35 @@
     text-align: left;
     font-family: "Calibri", sans-serif;
     font-weight: 800;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
 }
 
-.new-room-input-button {
+.modal-input-button {
     vertical-align: center;
     background: grey;
     font-size: 2rem;
     color: white;
     text-align: center;
     font-family: "Calibri", sans-serif;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
-.new-room-input-button:hover {
+.modal-input-button:hover {
     cursor: pointer;
     background: rgba(194, 194, 191, 1);
     color: grey;
 }
 
-.new-room-input {
+.modal-input {
     color: grey;
     font-size: 2rem;
     text-align: left;
     font-family: "Calibri", sans-serif;    
     padding-left: 2rem;
+    margin-top: 2rem;
 }
 
-.new-room-input-box {
+.modal-input-box {
     color: grey;
     font-size: 2rem;
     text-align: left;
@@ -40,4 +41,5 @@
     color: rgba(194, 194, 191, 1);
     margin-left: 2rem;
     margin-bottom: 2.5rem;
+    margin-top: 1rem;
 }

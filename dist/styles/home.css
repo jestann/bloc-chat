@@ -9,3 +9,7 @@
     padding-left: 4rem;
     line-height: 2.5rem;   
 }
+
+.current-username {
+    font-weight: bold;
+}
