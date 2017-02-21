@@ -3,12 +3,13 @@
     left: 200px;
     font-family: "Calibri", sans-serif;
     color: grey;
-    padding: 3rem;
-    padding-left: 4rem;
     line-height: 2.5rem;   
+    width: 100%;
 }
 
 .chatroom h1 {
+    padding-left: 3rem;
+    padding-bottom: 3rem;
     text-align: left;
     font-size 3rem;
     font-weight: 800;
@@ -19,8 +20,11 @@
 }
 
 .message-line {
+    padding: 1rem;
+    padding-left: 3rem;
     background: white;
     font-size: 2rem;
+    text-align: left;
 }
 
 .message-line:nth-child(even) {
@@ -29,14 +33,20 @@
 
 .username {
     font-weight: 800;
+    margin-right: 1rem;
 }
 
 .timestamp {
+    text-align: right;
     font-style: italic;
     color: rgba(194, 194, 191, 1);
+    margin-right: 200px;
+    padding-right: 2rem;
 }
 
 .message-text {
-    /* nothing here yet */
+    margin-right: 200px;
+    /* how do you make the text wrap rather than cut off when you resize the window on a long line of text content?
+    fixed it - a right margin to make up for the left margin sidebar, so it calculates the overflow right! */
 }
 

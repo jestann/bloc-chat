@@ -1,32 +1,25 @@
 (function() {
     function Message($firebaseArray, Room) {
-        let room = "";
-        let roomName = "";
-        let roomChats = [];
-        let roomChatObj = {};
-        let rooms = Room.all;
-        let messageQuery = firebase.database().ref().child("messages");
-        
-        function setRoom (roomId) {
-            room = roomId;
-            roomName = rooms.filter((room) => room.$id===roomId)[0].$value;
-            console.log(roomName);
-            
-            roomChats = []; messageQuery.orderByChild("roomId").equalTo(roomId).on('value', (snapshot) => roomChatObj = snapshot.val());
-            // roomChats = $firebaseArray(roomChats);
-            for (let key in roomChatObj) {
-               roomChats.push(roomChatObj[key]);
-            }
-            console.log(roomChats);
-        }
-        
-        return {
-            setRoom: setRoom,
-            room: room,
-            roomName: roomName,
-            roomChats: roomChats
+        let Message = {
+            room: "",
+            roomName: "",
+            roomChats: [],
+            rooms: Room.all
         };
         
+        let messageQuery = firebase.database().ref().child("messages");
+        
+        Message.setRoom = function (roomId) {
+            Message.room = roomId;
+
+            Message.roomName = Message.rooms.filter((room) => room.$id===roomId)[0].$value;
+
+            Message.roomChats = $firebaseArray(messageQuery.orderByChild("roomId").equalTo(roomId));
+            // console.log(Message.roomChats);
+            // this console.log is always an empty array... why is that?
+        }
+        
+        return Message;        
     }
     
     angular
