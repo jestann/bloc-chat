@@ -1,5 +1,5 @@
 (function() {
-    function Message($firebaseArray, Room) {
+    function Message($firebaseArray, Room, $cookies) {
         let Message = {
             username: "",
             room: "",
@@ -22,7 +22,12 @@
         }
         
         Message.send = function (content) {
-            
+            Message.roomChats.$add({
+                roomId: Message.room,
+                content: content,
+                sentAt: 0,
+                username: Message.username
+            });
         }
         
         return Message;        
@@ -30,5 +35,5 @@
     
     angular
         .module('blocChat')
-        .factory('Message', ['$firebaseArray', 'Room',  Message]);
+        .factory('Message', ['$firebaseArray', 'Room',  '$cookies', Message]);
 })();
