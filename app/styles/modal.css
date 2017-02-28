@@ -1,10 +1,11 @@
-.modalTemp h1 {
+.modal-head {
     font-size: 2rem;
     color: grey;
-    text-align: left;
     font-family: "Calibri", sans-serif;
     font-weight: 800;
-    padding-left: 2rem;
+    padding: 2rem;
+    text-align: left;
+    margin-top: 2rem;
 }
 
 .modal-input-button {
@@ -42,4 +43,18 @@
     margin-left: 2rem;
     margin-bottom: 2.5rem;
     margin-top: 1rem;
+}
+
+.close-button {
+    color: grey;
+    font-size: 2rem;
+    font-family: "Calibri", sans-serif;    
+    text-align: right;
+    font-weight: bold;
+    margin-right: 2rem;
+}
+
+.close-button:hover {
+    cursor: pointer;
+    color: rgba(194, 194, 191, 1);
 }

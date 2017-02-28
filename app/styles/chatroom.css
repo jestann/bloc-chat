@@ -17,6 +17,7 @@
 
 .message-list {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .message-line {
@@ -50,3 +51,21 @@
     fixed it - a right margin to make up for the left margin sidebar, so it calculates the overflow right! */
 }
 
+.new-message {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    background: rgba(242, 242, 242, 1);
+    font-size: 2rem;
+    padding-left: 2rem;
+}
+
+.message-input {
+    width: 50%;
+    font-style: italic;
+    padding: 1rem;
+}
+
+.message-button {
+    width: 20%
+}

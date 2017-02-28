@@ -25,7 +25,7 @@
             Message.roomChats.$add({
                 roomId: Message.room,
                 content: content,
-                sentAt: 0,
+                sentAt: Date.now(),
                 username: Message.username
             });
         }

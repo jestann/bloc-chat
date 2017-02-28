@@ -1,5 +1,6 @@
 (function () {
     function userController ($uibModalInstance, $cookies, Message) {
+        this.username = "";
         this.Message = Message;
         this.closeModal = $uibModalInstance.close;
         
@@ -15,6 +16,11 @@
                 this.closeModal();
             }
         };
+        this.keypress = function (event) {
+            if (event.key === "Enter") {
+                this.addUser(this.username);
+            }
+        }
     }
     
     angular.module('blocChat')

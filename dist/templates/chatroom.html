@@ -4,8 +4,17 @@
         <div class="message-line" ng-repeat="chat in chatroom.Message.roomChats">
             <div class="username">{{ chat.username }}</div>
             <div class="message-text">{{ chat.content }}</div>
-            <div class="timestamp">{{ chat.sentAt }}</div>
+            <div class="timestamp">{{ chat.sentAt | date: "EEEE h:mm a" }}</div>
         </div>
+    </section>
+    <section class="new-message">
+        <span class="username">
+            {{ chatroom.Message.username }}
+        </span>
+        <input type="text" placeholder="type a message here..." class="message-input" ng-keypress="chatroom.keypress($event)" ng-model="chatroom.newMessage"/>
+        <span class="navbar-button message-button" ng-click="chatroom.send(chatroom.newMessage)">
+            Send
+        </span>
     </section>
 </main>
 

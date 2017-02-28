@@ -8,6 +8,11 @@
             this.name = "";
             this.closeModal();
         };
+        this.keypress = function (event) {
+            if (event.key==="Enter") {
+                this.addRoom(this.name);
+            }
+        }
     }
     
     angular.module('blocChat')
