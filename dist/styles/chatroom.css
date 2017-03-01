@@ -47,8 +47,10 @@
 
 .message-text {
     margin-right: 200px;
-    /* how do you make the text wrap rather than cut off when you resize the window on a long line of text content?
-    fixed it - a right margin to make up for the left margin sidebar, so it calculates the overflow right! */
+    /* 
+    Q: how do you make the text wrap rather than cut off when you resize the window on a long line of text content?
+    A: fixed it - a right margin to make up for the left margin sidebar, so it calculates the overflow right! 
+    */
 }
 
 .new-message {
@@ -58,11 +60,33 @@
     font-size: 2rem;
 }
 
-.new-message .username {
+.new-message-username {
     background: rgba(242, 242, 242, 1);
     padding: 1rem;
-    padding-left: 2rem;
     border-radius: 5px;
+}
+
+.is-typing {
+/*  position: fixed;
+    bottom: 50px;
+    left: 220px;
+    background: rgba(255, 255, 255, .75);
+    --removed to relocate to new-message line--
+*/
+    background: rgba(242, 242, 242, 1);
+    color: rgba(194, 194, 191, 1);
+    font-style: italic;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.is-typing .username {
+    color: grey;
+}
+
+
+.new-message .username {
+    padding-left: 2rem;
 }
 
 .message-input {

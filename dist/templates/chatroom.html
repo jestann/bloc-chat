@@ -7,9 +7,17 @@
             <div class="timestamp">{{ chat.sentAt | date: "EEEE h:mm a" }}</div>
         </div>
     </section>
+        
     <section class="new-message">
-        <span class="username">
-            {{ chatroom.Message.username }}
+        <span class="new-message-username">
+            <span class="is-typing" ng-show="chatroom.isTyping()">
+                <span class="username">
+                    {{ chatroom.userTyping }}
+                </span>is typing...
+            </span>
+            <span class="username">
+                {{ chatroom.Message.username }}
+            </span>
         </span>
         <input type="text" placeholder="type a message here..." class="message-input" ng-keypress="chatroom.keypress($event)" ng-model="chatroom.newMessage"/>
         <span class="navbar-button message-button" ng-click="chatroom.send(chatroom.newMessage)">

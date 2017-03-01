@@ -12,6 +12,11 @@
             }
         }
         
+        this.userTyping = "testuser";
+        this.isTyping = function () {
+            return true;
+        }
+        
         // console.log(this.Message.roomChats);
         // this console.log always an empty array, why?
         // this.roomId = Message.roomId;
