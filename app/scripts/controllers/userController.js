@@ -1,12 +1,15 @@
 (function () {
-    function userController ($uibModalInstance, $cookies, Message) {
+    function userController ($uibModalInstance, $firebaseArray, Message) {
         this.username = "";
         this.Message = Message;
         this.closeModal = $uibModalInstance.close;
         
-        this.addUser = function (username) {
-            if (username) {
-                $cookies.put('currentUser', username);
+        this.addUser = function (username, email, password) {
+            if (username && email && password) {
+                let auth = firebase.auth();
+                let create = auth.createUserWithEmailAndPassword;
+                create(email, password);
+                $firebaseArray
                 Message.username = username;
                 
                 // checking for accurate change
@@ -24,5 +27,5 @@
     }
     
     angular.module('blocChat')
-        .controller('userController', ['$uibModalInstance', '$cookies', 'Message', userController]);
+        .controller('userController', ['$uibModalInstance', '$firebaseArray', 'Message', userController]);
 })();
