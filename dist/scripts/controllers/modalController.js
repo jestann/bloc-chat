@@ -4,9 +4,11 @@
         this.name = "";
         this.closeModal = $uibModalInstance.close;
         this.addRoom = function (name) {
-            Room.addRoom(name);
-            this.name = "";
-            this.closeModal();
+            if (name) {
+                Room.addRoom(name);
+                this.name = "";
+                this.closeModal();
+            }
         };
         this.keypress = function (event) {
             if (event.key==="Enter") {

@@ -55,17 +55,25 @@
     position: fixed;
     bottom: 0px;
     width: 100%;
-    background: rgba(242, 242, 242, 1);
     font-size: 2rem;
+}
+
+.new-message .username {
+    background: rgba(242, 242, 242, 1);
+    padding: 1rem;
     padding-left: 2rem;
+    border-radius: 5px;
 }
 
 .message-input {
     width: 50%;
     font-style: italic;
     padding: 1rem;
+    border: none;
+    border-radius: 5px;
 }
 
 .message-button {
-    width: 20%
+    height: 100%;
+    border-radius: 5px;
 }

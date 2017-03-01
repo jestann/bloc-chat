@@ -13,3 +13,22 @@
 .current-username {
     font-weight: bold;
 }
+
+.settings-button {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: rgba(194, 194, 191, 1);
+    font-family: "Calibri", sans-serif;
+    color: grey;
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.settings-button:hover {
+    cursor: pointer;
+    background: grey;
+    color: white;
+}
