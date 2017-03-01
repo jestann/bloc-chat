@@ -1,31 +1,45 @@
 (function () {
-    function userController ($uibModalInstance, $firebaseArray, Message) {
+    function userController ($uibModalInstance, $firebaseArray, User) {
         this.username = "";
+        this.email = "";
+        this.password = "";
+        this.error = null;
+        
+        this.User = User;
         this.Message = Message;
         this.closeModal = $uibModalInstance.close;
         
-        this.addUser = function (username, email, password) {
-            if (username && email && password) {
-                let auth = firebase.auth();
-                let create = auth.createUserWithEmailAndPassword;
-                create(email, password);
-                $firebaseArray
-                Message.username = username;
+        this.signIn = function (username, email, password) {
+            if (this.User.exists(username)) {
+                if (username && password) {
+                    this.error = this.User.signIn(username, password);
+                    
+                    if (!error) {
+                        this.username = "";
+                        this.email = "";
+                        this.password = "";
+                        this.closeModal();
+                    }
+                }
+            } else if (username && email && password) {
+                this.error = this.User.addUser(username, email, password);
                 
-                // checking for accurate change
-                console.log("changed to ", Message.username);
-                console.log("stored as ", $cookies.get('currentUser'));
-
-                this.closeModal();
+                if (!error) {
+                    this.username = "";
+                    this.email = "";
+                    this.password = "";
+                    this.closeModal();
+                }
             }
         };
+        
         this.keypress = function (event) {
             if (event.key === "Enter") {
-                this.addUser(this.username);
+                this.signIn(this.username, this.email, this.password);
             }
-        }
+        };
     }
     
     angular.module('blocChat')
-        .controller('userController', ['$uibModalInstance', '$firebaseArray', 'Message', userController]);
+        .controller('userController', ['$uibModalInstance', '$firebaseArray', 'User', userController]);
 })();

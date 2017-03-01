@@ -1,7 +1,7 @@
 (function() {
-    function Message($firebaseArray, Room, $cookies) {
+    function Message($firebaseArray, Room, User) {
         let Message = {
-            username: "",
+            username: User.username,
             room: "",
             roomName: "",
             roomChats: [],
@@ -35,5 +35,5 @@
     
     angular
         .module('blocChat')
-        .factory('Message', ['$firebaseArray', 'Room',  '$cookies', Message]);
+        .factory('Message', ['$firebaseArray', 'User', 'Room', Message]);
 })();
