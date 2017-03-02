@@ -25,38 +25,45 @@
         User.addUser = function (username, email, password) {
             
             if (!User.exists(username)) {
-               
+               console.log("checking");
                let error = null; firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
                     if (error.code) {
                         error = error.message;
+                        console.log(error);
+                        return error;
                     }
                 });
                 
-                if (error) {
-                    return error;
-                } else {
-                    userObject = firebase.auth().currentUser;
-                    console.log(userObject);
+                if (!error) {
+                    firebase.auth().onAuthStateChanged(function (user) {
+                        if (user) {
+                            console.log(user);
+                            User.all.$add({
+                                userID: user.uid,
+                                username: username,
+                                email: email
+                            });
+                            // use set method - can use usename as unique key
             
-                    User.all.$add({
-                        userID: userObject.uid,
-                        username: username,
-                        email: email
+                            User.userID = user.uid;
+                            User.username = username;
+                            User.email = email;
+                        }
                     });
-            
-                    User.userID = userObject.uid;
-                    User.username = username;
-                    User.email = email;
                 }
             }
         };
         
+        
+        // don't use my own exists method, use firebase
         User.signIn = function (username, password) {
             let error = null;
             if (!User.exists(username)) {
                 error = "username does not exist";
+                console.log(error)
                 return error;
             } else {
+                    
                 if (firebase.auth().currentUser) {
                     firebase.auth().signOut();
                 }
@@ -66,7 +73,7 @@
                 User.email = User.all.filter((user) => user.username.$value===username)[0].email.$value;
                 firebase.auth().signInWithEmailAndPassword(User.email, password).catch(function(error) {
                     if (error.code === "auth/wrong-password") {
-                        error = "wrong password";
+                    error = "wrong password";
                     } else {
                         error = error.message;
                     }

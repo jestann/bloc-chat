@@ -13,7 +13,7 @@
                 if (username && password) {
                     this.error = this.User.signIn(username, password);
                     
-                    if (!error) {
+                    if (!this.error) {
                         this.username = "";
                         this.email = "";
                         this.password = "";
@@ -22,8 +22,9 @@
                 }
             } else if (username && email && password) {
                 this.error = this.User.addUser(username, email, password);
+                console.log(this.error);
                 
-                if (!error) {
+                if (!this.error) {
                     this.username = "";
                     this.email = "";
                     this.password = "";
