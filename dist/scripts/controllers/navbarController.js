@@ -10,7 +10,7 @@
         this.userTemplate = {
             templateUrl: "/templates/userModal.html",
             controller: "userController",
-            controllerAs: "user"
+            controllerAs: "userModal"
         };
         this.setRoom = Message.setRoom;
         this.Message = Message;

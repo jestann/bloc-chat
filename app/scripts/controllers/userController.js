@@ -6,7 +6,6 @@
         this.error = null;
         
         this.User = User;
-        this.Message = Message;
         this.closeModal = $uibModalInstance.close;
         
         this.signIn = function (username, email, password) {

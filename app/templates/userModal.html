@@ -1,6 +1,6 @@
 <section class="modalTemp">
     <h1>Add New User</h1>
-    <span class="close-button" ng-show="user.Message.username" ng-click="user.closeModal()">X</span>
+    <span class="close-button" ng-show="user.User.username" ng-click="user.closeModal()">X</span>
 
     <div class="modal-input" ng-show="user.User.username">
         The current user is <span class="current-username">{{ user.User.username }}</span>.
@@ -10,17 +10,17 @@
         To create a new user, enter a username, email, and password.
         </span>
         
-        <div class="username-input">
+        <div class="id-input">
             Username 
-            <input class="modal-input-box" type="text" placeholder="type a username here..." ng-keypress="user.keypress($event)" ng-model="user.username"/>
+            <input class="modal-input-box" type="text" placeholder="exampleuser" ng-keypress="user.keypress($event)" ng-model="user.username"/>
         </div>
-        <div class="email-input" ng-show="!user.User.exists(user.username)">
+        <div class="id-input" ng-show="!user.User.exists(user.username)">
             Email
-            <input class="modal-input-box" type="text" placeholder="type an email address here..." ng-keypress="user.keypress($event)" ng-model="user.email"/>
+            <input class="modal-input-box" type="text" placeholder="test@email.com" ng-keypress="user.keypress($event)" ng-model="user.email"/>
         </div>
-        <div class="password-input">
+        <div class="id-input">
             Password 
-            <input class="modal-input-box" type="text" placeholder="type your password here..." ng-keypress="user.keypress($event)" ng-model="user.password"/>
+            <input class="modal-input-box" type="text" placeholder="type a password here..." ng-keypress="user.keypress($event)" ng-model="user.password"/>
         </div>
         <div class="username-error" ng-show="user.error">
             Error: {{ user.error }}

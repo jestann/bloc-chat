@@ -29,14 +29,9 @@
 // RUN BLOCK for user authentication
 
 (function() {
-    function userCookies($cookies, $uibModal, Message) {
-        // for testing
-        // $cookies.put('currentUser', "");
-        
+    function userCookies($uibModal, Message) {        
         // checking for username at login
-        let thisUser = $cookies.get('currentUser');
-        Message.username = thisUser;
-        console.log("it was ", thisUser);
+        let thisUser = firebase.auth().currentUser;
         
         if (!thisUser) {
             $uibModal.open({
@@ -49,5 +44,5 @@
         
         angular
             .module('blocChat')
-            .run(['$cookies', '$uibModal', 'Message', userCookies]);
+            .run(['$uibModal', 'Message', userCookies]);
     })();

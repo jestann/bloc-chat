@@ -24,6 +24,12 @@
     color: rgba(194, 194, 191, 1);
 }
 
+.id-input {
+    margin-bottom: -1.5rem;
+    margin-top: 1rem;
+    padding-right: 2rem;
+}
+
 .modal-input {
     color: grey;
     font-size: 2rem;
