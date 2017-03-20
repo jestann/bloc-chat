@@ -15,8 +15,10 @@
         User.exists = function (username) {            
             let ifExists = false;
             for (let i=0; i<User.all.length; i++) {
-                if (User.all[i].username.$value===username) {
+                console.log(User.all[i].username);
+                if (User.all[i].username===username) {
                     ifExists = true;
+                    console.log("already exists: ", User.all[i].username);
                 }    
             }
             return ifExists;
@@ -37,7 +39,6 @@
                 if (!error) {
                     firebase.auth().onAuthStateChanged(function (user) {
                         if (user) {
-                            console.log(user);
                             User.all.$add({
                                 userID: user.uid,
                                 username: username,
@@ -68,9 +69,9 @@
                     firebase.auth().signOut();
                 }
             
-                User.userID = User.all.filter((user) => user.username.$value===username)[0].userID.$value;
+                User.userID = User.all.filter((user) => user.username===username)[0].userID;
                 User.username = username;
-                User.email = User.all.filter((user) => user.username.$value===username)[0].email.$value;
+                User.email = User.all.filter((user) => user.username===username)[0].email;
                 firebase.auth().signInWithEmailAndPassword(User.email, password).catch(function(error) {
                     if (error.code === "auth/wrong-password") {
                     error = "wrong password";

@@ -39,6 +39,11 @@
     margin-top: 2rem;
 }
 
+.modal-input tr {
+    vertical-align: center;
+    text-align: right;
+}
+
 .settings-modal {
     margin-bottom: 3rem;
 }

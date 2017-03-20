@@ -2,22 +2,26 @@
     function Message($firebaseArray, Room, User) {
         let Message = {
             username: User.username,
-            room: "",
+            roomId: "",
             roomName: "",
             roomChats: [],
-            rooms: Room.all
+            Room: Room
         };
         
         let messageQuery = firebase.database().ref().child("messages");
         
         Message.setRoom = function (roomId) {
-            Message.room = roomId;
+            Message.roomId = roomId;
+            console.log(roomId);
 
-            Message.roomName = Message.rooms.filter((room) => room.$id===roomId)[0].$value;
-
+            console.log(Message.Room.all);
+            Message.roomName = Message.Room.all.filter((room) => room.$id===roomId);
+            console.log(Message.roomName)
+            
+            
             Message.roomChats = $firebaseArray(messageQuery.orderByChild("roomId").equalTo(roomId));
             
-            // console.log(Message.roomChats);
+            console.log(Message.roomChats);
             // this console.log is always an empty array... why is that?
         }
         

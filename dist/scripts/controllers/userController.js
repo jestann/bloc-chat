@@ -4,6 +4,7 @@
         this.email = "";
         this.password = "";
         this.error = null;
+        this.exists = false;
         
         this.User = User;
         this.closeModal = $uibModalInstance.close;
@@ -37,6 +38,14 @@
             if (event.key === "Enter") {
                 this.signIn(this.username, this.email, this.password);
             }
+        };
+        
+        this.userKeypress = function (event) {
+            if (event.key === "Enter") {
+                this.signIn(this.username, this.email, this.password);
+            }
+            this.exists = this.User.exists(this.username+event.key);
+            console.log(this.exists);
         };
     }
     

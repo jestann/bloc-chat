@@ -1,30 +1,34 @@
 <section class="modalTemp">
-    <h1>Add New User</h1>
+    <h1>Choose User</h1>
     <span class="close-button" ng-show="user.User.username" ng-click="user.closeModal()">X</span>
 
     <div class="modal-input" ng-show="user.User.username">
         The current user is <span class="current-username">{{ user.User.username }}</span>.
     </div>
     <div class="modal-input">
-        Please enter username and password to sign in. <span ng-show="!user.User.exists(user.username)">
+        Please enter username and password to sign in. <span ng-show="!user.exists">
         To create a new user, enter a username, email, and password.
         </span>
         
-        <div class="id-input">
-            Username 
-            <input class="modal-input-box" type="text" placeholder="exampleuser" ng-keypress="user.keypress($event)" ng-model="user.username"/>
-        </div>
-        <div class="id-input" ng-show="!user.User.exists(user.username)">
-            Email
-            <input class="modal-input-box" type="text" placeholder="test@email.com" ng-keypress="user.keypress($event)" ng-model="user.email"/>
-        </div>
-        <div class="id-input">
-            Password 
-            <input class="modal-input-box" type="text" placeholder="type a password here..." ng-keypress="user.keypress($event)" ng-model="user.password"/>
-        </div>
+        <table>
+        <tr class="id-input">
+            <td>Username</td> 
+            <td><input class="modal-input-box" type="text" placeholder="exampleuser" ng-keypress="user.userKeypress($event)" ng-model="user.username"/></td>
+        </tr>
+        <tr class="id-input" ng-show="!user.exists">
+            <td>Email</td>
+            <td><input class="modal-input-box" type="text" placeholder="test@email.com" ng-keypress="user.keypress($event)" ng-model="user.email"/></td>
+        </tr>
+        <tr class="id-input">
+            <td>Password</td> 
+            <td><input class="modal-input-box" type="text" placeholder="type a password here..." ng-keypress="user.keypress($event)" ng-model="user.password"/></td>
+        </tr>
+        </table>
+        
         <div class="username-error" ng-show="user.error">
             Error: {{ user.error }}
         </div>
+        
     </div>
     <div class="modal-input-button" ng-click="user.signIn(user.username, user.email, user.password)">
         Sign In
