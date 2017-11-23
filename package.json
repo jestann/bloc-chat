@@ -1,17 +1,17 @@
 {
-  "name": "bloc-frontend-project-starter",
+  "name": "Chateau",
   "version": "0.0.2",
-  "description": "Starter project for the Bloc Frontend Web Development",
+  "description": "A chat app inspired by Slack",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bloc/bloc-frontend-project-starter"
+    "url": "https://github.com/jestann/chateau"
   },
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
   },
-  "author": "Bloc Inc",
-  "license": "ISC",
+  "author": "jestann",
+  "license": "MIT",
   "dependencies": {
     "hapi": "~7.5.0",
     "path": "^0.4.9"

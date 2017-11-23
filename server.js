@@ -1,3 +1,5 @@
+// set up server.
+
 var Hapi = require('hapi'),
     path = require('path'),
     port = process.env.PORT || 3000,
