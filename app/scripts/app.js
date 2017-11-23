@@ -20,7 +20,7 @@
     }
     
     angular
-        .module('blocChat', ['ui.bootstrap','ui.router', 'firebase', 'ngCookies'])
+        .module('chateau', ['ui.bootstrap','ui.router', 'firebase', 'ngCookies'])
         .config(config);
 })();
 
@@ -48,6 +48,6 @@
     }
         
         angular
-            .module('blocChat')
+            .module('chateau')
             .run(['$cookies', '$uibModal', 'Message', userCookies]);
     })();

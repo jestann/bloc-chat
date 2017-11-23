@@ -14,6 +14,6 @@
         };
     }
     
-    angular.module('blocChat')
+    angular.module('chateau')
         .factory('Room', ['$firebaseArray', Room]);
 })();

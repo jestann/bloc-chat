@@ -20,6 +20,6 @@
     }
     
     angular
-        .module('blocChat')
+        .module('chateau')
         .controller('chatController', ['Message', chatController]);
 })();

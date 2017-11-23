@@ -8,6 +8,16 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
 
+        connect: {
+            all: {
+                options:{
+                    port: process.env.PORT || 8080,
+                    hostname: process.env.IP || "0.0.0.0",
+                    livereload: 8081
+                }
+            }
+        },
+
         watch: {
             hapi: {
                 files: [

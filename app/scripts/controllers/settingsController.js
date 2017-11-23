@@ -10,6 +10,6 @@
         };
     }
     
-    angular.module('blocChat')
+    angular.module('chateau')
         .controller('settingsController', ['$uibModal', 'Room', 'Message', settingsController]);
 })();

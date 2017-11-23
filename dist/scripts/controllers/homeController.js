@@ -3,6 +3,6 @@
         // no functionality needed here yet
     }
     
-    angular.module('blocChat')
+    angular.module('chateau')
         .controller('homeController', ['Room', homeController]);
 })();

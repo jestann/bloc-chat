@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html ng-app="blocChat">
+<html ng-app="chateau">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Chat Project</title>
+    <title>Chateau</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="/styles/home.css">
     <link rel="stylesheet" href="/styles/navbar.css">
@@ -15,17 +15,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
-    <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyCrxoGXkYTm5Pubx_wRcpdM6MLfWsY49es",
-            authDomain: "bloc-chat-53925.firebaseapp.com",
-            databaseURL: "https://bloc-chat-53925.firebaseio.com",
-            storageBucket: "bloc-chat-53925.appspot.com",
-            messagingSenderId: "559299969386"
-        };
-        firebase.initializeApp(config);
-    </script>
+    
+    <!-- the below config script file must be create first to initialize and connect to Firebase before running app. -->
+    <script src="/scripts/config.js"></script>
+    
     <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
     <script src="/scripts/dependencies/ui-bootstrap-tpls-2.5.0.min.js"></script>
@@ -38,9 +31,7 @@
     <script src="/scripts/controllers/chatController.js"></script>
     <script src="/scripts/controllers/modalController.js"></script>
     <script src="/scripts/controllers/userController.js"></script>
-    <script src="/scripts/controllers/settingsController.js">
-    </script>
-    <script src="/scripts/controllers/setmodeController.js">
-    </script>
+    <script src="/scripts/controllers/settingsController.js"></script>
+    <script src="/scripts/controllers/setmodeController.js"></script>
 </body>
 </html>

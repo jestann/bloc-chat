@@ -16,6 +16,6 @@
         this.Message = Message;
     }
     
-    angular.module('blocChat')
+    angular.module('chateau')
         .controller('navbarController', ['$uibModal', 'Room', 'Message', navbarController]);
 })();

@@ -1,6 +1,10 @@
 .home {
     position: absolute;
     left: 200px;
+    /*
+    background-image: url("./../assets/images/castle.jpg"), url("./../assets/images/rockWall.jpg");
+    background-repeat: no-repeat;
+    */
     font-family: "Calibri", sans-serif;
     color: grey;
     font-size: 1.7rem;

@@ -23,6 +23,6 @@
         }
     }
     
-    angular.module('blocChat')
+    angular.module('chateau')
         .controller('userController', ['$uibModalInstance', '$cookies', 'Message', userController]);
 })();

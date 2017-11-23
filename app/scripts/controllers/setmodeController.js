@@ -7,6 +7,6 @@
         };
     }
     
-    angular.module('blocChat')
+    angular.module('chateau')
         .controller('setmodeController', ['$uibModalInstance', 'Message', setmodeController]);
 })();

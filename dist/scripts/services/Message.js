@@ -34,6 +34,6 @@
     }
     
     angular
-        .module('blocChat')
+        .module('chateau')
         .factory('Message', ['$firebaseArray', 'Room',  '$cookies', Message]);
 })();
