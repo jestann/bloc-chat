@@ -90,4 +90,4 @@ A running test-drive version of the app exists [here](https://jestann-chateau.he
 
 #### Case Study
 
-A description of the build project case study exists [here](https://jessbird.me/portfolio/chateau.html).
+A description of the build project case study exists [here](http://jessbird.me/portfolio/chateau.html).
