@@ -31,22 +31,23 @@ This runs a server on port 8080 with live reloading for development. It copies f
 
 ### Database Authentication
 
-**Note:** This repository doesn't include the needed `config.js` file, which includes the authentication information for the Firebase database and initializes the database.
+**Note:** This repository uses environment variables to populate the `config.js` file, which initializes against the Firebase database.
 
-To run this app, developers must create their own `config.js` file with Firebase authentication information as noted in `config.example.js.`:
+To run this app, developers must create a `config.js` file with their own Firebase authentication information or populate environment variables as given in the existing `config.js`:
 
 ```
 var config = {
-            apiKey: "",
-            authDomain: "",
-            databaseURL: "",
-            storageBucket: "",
-            messagingSenderId: ""
+            apiKey: process.env.APIKEY,
+            authDomain: process.env.AUTH_DOMAIN,
+            databaseURL: process.env.DATABASE_URL,
+            storageBucket: process.env.STORAGE_BUCKET,
+            messagingSenderId: process.env.MESSAGING_SENDER_ID
 };
+
 firebase.initializeApp(config);
 ```
 
-Once this file is created and stored in the `app/scripts` directory, the app will authenticate correctly to Firebase.
+Once this file is correctly populated, the app will authenticate to Firebase.
 
 #### File Structure
 
@@ -65,7 +66,7 @@ Once this file is created and stored in the `app/scripts` directory, the app wil
 │   │   ├── services
 │   │   │   └── ...
 │   │   ├── app.js
-│   │   └── config.js    <-- this file must be created by the developer to initialize against a database
+│   │   └── config.js
 │   ├── styles
 │   │   └── ...
 │   └── templates
