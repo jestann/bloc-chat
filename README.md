@@ -7,7 +7,7 @@
 - [AngularJS](https://angularjs.org/)
 - [Firebase](https://firebase.google.com/)
 
-*Chateau uses [Grunt](https://gruntjs.com/) to run the development server.*
+Chateau uses [Grunt](https://gruntjs.com/) to run the development server.
 
 ### Project Objectives
 
@@ -27,7 +27,7 @@ $ npm install
 $ grunt
 ```
 
-This runs a server on port 8080 with live reloading for development. It copies files to the dist directory which it serves, using [Grunt Hapi](https://github.com/athieriot/grunt-hapi) based on [`HapiJS`](http://hapijs.com/).
+This runs a server on port 8080 with live reloading for development. It copies files to the dist directory which it serves, using [Grunt Hapi](https://github.com/athieriot/grunt-hapi) based on [HapiJS](http://hapijs.com/).
 
 ### Database Authentication
 
@@ -36,8 +36,6 @@ This runs a server on port 8080 with live reloading for development. It copies f
 To run this app, developers must create their own `config.js` file with Firebase authentication information as noted in `config.example.js.`:
 
 ```
-// This file demonstrates the config.js file needed for running this app against a Firebase database.
-
 var config = {
             apiKey: "",
             authDomain: "",
@@ -46,8 +44,6 @@ var config = {
             messagingSenderId: ""
 };
 firebase.initializeApp(config);
-
-module.exports = config;
 ```
 
 Once this file is created and stored in the `app/scripts` directory, the app will authenticate correctly to Firebase.
@@ -69,7 +65,7 @@ Once this file is created and stored in the `app/scripts` directory, the app wil
 │   │   ├── services
 │   │   │   └── ...
 │   │   ├── app.js
-│   │   └── config.js    <-- this file must be created by the developer to initialize against a Firebase database (see *Database Authentication*)
+│   │   └── config.js    <-- this file must be created by the developer to initialize against a database
 │   ├── styles
 │   │   └── ...
 │   └── templates
