@@ -1,5 +1,5 @@
 ## Chateau
-### A Chat app inspired by Slack
+*A Chat app inspired by Slack*
 
 This project was built on [AngularJS](https://angularjs.org/) and [Firebase](https://firebase.google.com/).
 

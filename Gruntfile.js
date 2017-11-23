@@ -1,6 +1,5 @@
 module.exports = function(grunt) {
 
-    // register grunt tasks
     grunt.registerTask( 'default', [ 'clean', 'copy', 'hapi', 'watch'] );
 
     grunt.registerTask( 'build', [ 'clean', 'copy' ] );
