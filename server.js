@@ -1,4 +1,3 @@
-// test
 var Hapi = require('hapi'),
     path = require('path'),
     port = process.env.PORT || 8080,

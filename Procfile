@@ -1,2 +1,1 @@
-test
 web: npm start
