@@ -27,7 +27,7 @@ $ npm install
 $ grunt
 ```
 
-This runs a server on port 8080 with live reloading for development. It copies files to the dist directory which it serves, using [Grunt Hapi](https://github.com/athieriot/grunt-hapi) based on [HapiJS](http://hapijs.com/).
+This runs a server on port 8080 with live reloading for development. It copies files to the dist directory which it serves using [Grunt Hapi](https://github.com/athieriot/grunt-hapi) based on [HapiJS](http://hapijs.com/).
 
 ### Database Authentication
 
@@ -51,6 +51,8 @@ Once this file is correctly populated, the app will authenticate to Firebase.
 
 #### File Structure
 
+The app directory contains all site files. These are copied to the dist directory to be served.
+
 ```
 ├── app
 │   ├── assets
@@ -71,6 +73,8 @@ Once this file is correctly populated, the app will authenticate to Firebase.
 │   │   └── ...
 │   └── templates
 │       └── ...
+├── dist
+│   └── ...
 ├── Gruntfile.js
 ├── package.json
 ├── Procfile
