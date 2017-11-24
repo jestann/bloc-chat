@@ -50,4 +50,4 @@
         angular
             .module('chateau')
             .run(['$cookies', '$uibModal', 'Message', userCookies]);
-    })();
+})();
