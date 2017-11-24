@@ -1,0 +1,12 @@
+<section class="modalTemp">
+    <h1>Add Chat Room</h1>
+    <span class="close-button" ng-click="modal.closeModal()">X</span>
+
+    <div class="modal-input">
+        Please enter a name for the new chat room.
+    </div>
+    <input class="modal-input-box" type="text" placeholder="type a name here..." ng-keypress="modal.keypress($event)" ng-model="modal.name"/>
+    <div class="modal-input-button" ng-click="modal.addRoom(modal.name)">
+        Create Room
+    </div>
+</section>
