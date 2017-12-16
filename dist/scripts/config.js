@@ -1,9 +1,9 @@
 var config = {
-            apiKey: process.env.APIKEY,
-            authDomain: process.env.AUTH_DOMAIN,
-            databaseURL: process.env.DATABASE_URL,
-            storageBucket: process.env.STORAGE_BUCKET,
-            messagingSenderId: process.env.MESSAGING_SENDER_ID
+            apiKey: "AIzaSyCrxoGXkYTm5Pubx_wRcpdM6MLfWsY49es",
+            authDomain: "bloc-chat-53925.firebaseapp.com",
+            databaseURL: "https://bloc-chat-53925.firebaseio.com",
+            storageBucket: "bloc-chat-53925.appspot.com",
+            messagingSenderId: "559299969386"
 };
 
-firebase.initializeApp(config);
+module.exports = config;
