@@ -5,5 +5,6 @@ var config = {
             storageBucket: "bloc-chat-53925.appspot.com",
             messagingSenderId: "559299969386"
 };
+firebase.initializeApp(config);
 
 module.exports = config;
