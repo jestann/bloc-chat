@@ -1,5 +1,6 @@
 # revamp storage and retrieval of configuration information, then remove.
 # config.js
+config.example.js
 
 .bashrc
 node_modules/
