@@ -1,4 +1,6 @@
-var Hapi = require('hapi'),
+/* Create Hapi server */
+
+let Hapi = require('hapi'),
     path = require('path'),
     port = process.env.PORT || 8080,
     server = new Hapi.Server(port),
@@ -31,7 +33,7 @@ var Hapi = require('hapi'),
             }
         }
     };
-
+    
 server.route([ routes.css, routes.js, routes.assets, routes.templates, routes.spa ]);
 server.start( onServerStarted );
 
@@ -46,5 +48,19 @@ function createDirectoryRoute( directory ) {
         }
     };
 }
+
+/* export configuration data
+
+let exportServer = {}
+exportServer.config = {
+            apiKey: process.env.APIKEY,
+            authDomain: process.env.AUTH_DOMAIN,
+            databaseURL: process.env.DATABASE_URL,
+            storageBucket: process.env.STORAGE_BUCKET,
+            messagingSenderId: process.env.MESSAGING_SENDER_ID
+}
+exportServer.server = server
+
+*/
 
 module.exports = server;
