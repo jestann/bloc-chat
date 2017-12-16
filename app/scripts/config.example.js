@@ -7,5 +7,6 @@ var config = {
             storageBucket: "",
             messagingSenderId: ""
 };
+firebase.initializeApp(config);
 
 module.exports = config;
