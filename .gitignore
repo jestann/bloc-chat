@@ -1,3 +1,6 @@
+# revamp storage and retrieval of configuration information, then remove.
+# config.js
+
 .bashrc
 node_modules/
 bower_components/
