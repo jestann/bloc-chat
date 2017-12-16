@@ -84,10 +84,11 @@ The app directory contains all site files. These are copied to the dist director
 
 ### Future Features
 
-- Medieval imagery and design.
+- Improve storage and retrieval of configuration variables using environment variables.
 - User authorization allows different access for different channels.
 - Admin users can delete member users.
 - Admin users can delete channels.
+- Revamp design with medieval imagery using [Bootstrap](https://getbootstrap.com/).
 
 #### Implementation
 
