@@ -84,6 +84,7 @@ The app directory contains all site files. These are copied to the dist director
 
 ### Future Features
 
+- Integrate design responsiveness to improve experience on mobile devices.
 - Improve storage and retrieval of configuration variables using environment variables.
 - User authorization allows different access for different channels.
 - Admin users can delete member users.
