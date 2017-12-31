@@ -1,7 +1,7 @@
 {
   "name": "Chateau",
   "version": "0.0.2",
-  "description": "A chat app inspired by Slack",
+  "description": "A multi-channel chat application",
   "repository": {
     "type": "git",
     "url": "https://github.com/jestann/chateau"
