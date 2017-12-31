@@ -1,6 +1,6 @@
 # Chateau
 
-*A chat application inspired by a mashup of medieval grey and Slack.*
+*A multi-channel chat application inspired by a mashup of medieval grey and old school instant messaging.*
 
 #### Build Frameworks
 
